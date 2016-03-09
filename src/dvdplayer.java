@@ -23,7 +23,7 @@ public class dvdplayer extends JFrame {
 
     private ButtonGroup btnGroup;
 
-    info[] infoBank = new info[]{
+    info[] infoBank = new info[]{ 
             new info("Tropic Thunder", 2009, "2 hrs 45 mins"),
             new info("ZooLander", 1999, "1hr 30mins"),
             new info("Lord of the Rings: The Two Towers", 2001, "4hrs 25mins")
