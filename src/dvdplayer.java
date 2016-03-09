@@ -23,7 +23,7 @@ public class dvdplayer extends JFrame {
 
     private ButtonGroup btnGroup;
 
-    info[] infoBank = new info[]{ 
+    info[] infoBank = new info[]{
             new info("Tropic Thunder", 2009, "2 hrs 45 mins"),
             new info("ZooLander", 1999, "1hr 30mins"),
             new info("Lord of the Rings: The Two Towers", 2001, "4hrs 25mins")
@@ -59,7 +59,7 @@ public class dvdplayer extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
 
-                if(currentIndex == infoBank.length){
+                if(currentIndex == (infoBank.length - 1)){
                     currentIndex = 0;
                     dvdInfo.setText(infoBank[currentIndex].toString());
                 }
@@ -88,7 +88,13 @@ public class dvdplayer extends JFrame {
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                dvdInfo.setText(infoBank[currentIndex - 1].toString());
+                if(currentIndex == 0){
+                    dvdInfo.setText(infoBank[currentIndex += infoBank.length].toString());
+
+                }
+                else {
+                    dvdInfo.setText(infoBank[(currentIndex - 1)].toString());
+                }
             }
         });
 
