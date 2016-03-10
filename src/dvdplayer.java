@@ -110,6 +110,8 @@ public class dvdplayer extends JFrame {
 
 
 
+
+
     public static void main(String[] args) {
         dvdplayer frame = new dvdplayer();
         frame.pack();
@@ -118,26 +120,5 @@ public class dvdplayer extends JFrame {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
-    }
-
-        private class ListenerClass implements ActionListener{
-
-        public void actionPerformed(ActionEvent e) {
-            if (play.isSelected()) {
-                dvdInfo.setText(infoBank[currentIndex].toString());
-            }
-            else if (stop.isSelected()) {
-                dvdInfo.setText(null);
-            }
-
-            else if(back.isSelected()){
-                dvdInfo.setText(infoBank[currentIndex - 1].toString());
-            }
-
-            else if(forward.isSelected()){
-                updateDVD();
-                dvdInfo.setText(infoBank[currentIndex].toString());
-            }
-        }
     }
 }
